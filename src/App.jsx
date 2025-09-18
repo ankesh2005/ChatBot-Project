@@ -8,10 +8,10 @@ import './App.css'
 
 function App() {
   const [chatMessages, setChatMessages] = useState([
-    { message: 'hello ChatBot', sender: 'user', id: 'id1' },
-    { message: 'Hello! How can I help you?', sender: 'robot', id: 'id2' },
-    { message: 'can you get me todays date?', sender: 'user', id: 'id3' },
-    { message: 'today is september 27', sender: 'robot', id: 'id4' }
+    { message: 'hello ChatBot', sender: 'user', id: 'id1',time:1736127288920 },
+    { message: 'Hello! How can I help you?', sender: 'robot', id: 'id2',time:1736127291230 },
+    { message: 'can you get me todays date?', sender: 'user', id: 'id3',time:1736127385356 },
+    { message: 'today is september 27', sender: 'robot', id: 'id4',time: 1736127385500 }
 ]);
 
 useEffect(()=>{
