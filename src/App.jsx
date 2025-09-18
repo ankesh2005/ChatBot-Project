@@ -7,7 +7,7 @@ import './App.css'
 
 
 function App() {
-  const [chatMessages, setChatMessages] = useState([
+  const [chatMessages, setChatMessages] = useState(JSON.parse(localStorage.getItem('messages'))||[
     { message: 'hello ChatBot', sender: 'user', id: 'id1',time:1736127288920 },
     { message: 'Hello! How can I help you?', sender: 'robot', id: 'id2',time:1736127291230 },
     { message: 'can you get me todays date?', sender: 'user', id: 'id3',time:1736127385356 },
@@ -22,6 +22,10 @@ useEffect(()=>{
     }
   })
 },[]);
+
+useEffect(()=>{
+  localStorage.setItem('messages',JSON.stringify(chatMessages));
+},[chatMessages]);
 
 return (
   <div className="app-container">
